@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Arduino Nicla Sense ME - Web BLE test</title>
+  <title>Motu - Polimi Pressure Sense</title>
 
   <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -212,7 +212,6 @@
     <div class="status widget">
       <button id="pairButton">CONNECT</button>
       <div class="label statusBar" id="bluetooth">Click the connect button to connect your device</div>
-      <img src="Logo-Arduino-Pro-inline.svg" style="position: inherit;padding-right: 0px;filter: invert(100%);float: right; grid-column: 3; width: 80%; margin-top: 8.5%;" />
     </div>
 
     <div class="square widget" id="3d">
@@ -235,12 +234,13 @@
       <div id="gyroscope" class="graph"></div>
     </div>
 
-    <div class="square widget">
-      <div class="label">&#128161; RGB LED control</div>
-      <div id="color-picker-container" class="graph"></div>
+
+    <div class="double widget">
+      <div class="label">&#9925; Pressure - </div>
+      <div class="doublegraph" id="pressure"></div>
     </div>
 
-    <div class="short widget">
+     <div class="short widget">
       <div class="label">&#127777; Temperature - </div>
       <div class="label" id="temperature-value"></div>
       <div class="label">&deg;C</div>
@@ -254,34 +254,7 @@
       <div class="shortgraph" id="humidity"></div>
 
     </div>
-
-    <div class="short widget">
-      <div class="label">&#9925; Pressure - </div>
-      <div class="label" id="pressure-value"></div>
-      <div class="label">kPa</div>
-      <div class="shortgraph" id="pressure"></div>
-    </div>
-
-    <div class="short widget">
-      <div class="label">&#127968; Indoor Air Quality - </div>
-      <div class="label" id="bsec-value"></div>
-      <div class="label"></div>
-      <div class="shortgraph" id="bsec"></div>
-    </div>
-
-    <div class="short widget">
-      <div class="label">&#127793; Co2 Value -</div>
-      <div class="label" id="co2-value"></div>
-      <div class="label"></div>
-      <div class="shortgraph" id="co2"></div>
-    </div>
-
-    <div class="short widget">
-      <div class="label">&#x1F4A8; Gas Value -</div>
-      <div class="label" id="gas-value"></div>
-      <div class="label"></div>
-      <div class="shortgraph" id="gas"></div>
-    </div>
+   
 
   </div>
 </body>

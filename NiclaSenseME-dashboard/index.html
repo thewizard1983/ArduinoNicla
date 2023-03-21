@@ -234,12 +234,7 @@
       <div class="label" id="gyroscope-value"></div>
       <div id="gyroscope" class="graph"></div>
     </div>
-    
-    <div class="double widget">
-      <div class="label">&#9925; Pressure </div>
-      <div class="doublegraph" id="pressure"></div>
-    </div>
-    
+
     <div class="square widget">
       <div class="label">&#128161; RGB LED control</div>
       <div id="color-picker-container" class="graph"></div>
@@ -259,7 +254,14 @@
       <div class="shortgraph" id="humidity"></div>
 
     </div>
-    
+
+    <div class="short widget">
+      <div class="label">&#9925; Pressure - </div>
+      <div class="label" id="pressure-value"></div>
+      <div class="label">kPa</div>
+      <div class="shortgraph" id="pressure"></div>
+    </div>
+
     <div class="short widget">
       <div class="label">&#127968; Indoor Air Quality - </div>
       <div class="label" id="bsec-value"></div>
@@ -380,7 +382,7 @@
   const pairButton = document.getElementById('pairButton');
   const BLEstatus = document.getElementById('bluetooth');
 
-  //snack('IMPORTANT - first upload the sketch to your Arduino Nicla Sense ME &nbsp;&nbsp; <a href="https://create.arduino.cc/editor/FT-CONTENT/333e2e07-ecc4-414c-bf08-005b611ddd75/preview">OPEN</a>', 1)
+  snack('IMPORTANT - first upload the sketch to your Arduino Nicla Sense ME &nbsp;&nbsp; <a href="https://create.arduino.cc/editor/FT-CONTENT/333e2e07-ecc4-414c-bf08-005b611ddd75/preview">OPEN</a>', 1)
   
   if ("bluetooth" in navigator) {
     pairButton.addEventListener('click', function (event) {
@@ -740,7 +742,7 @@
       updateViz('gyroscope', [graph]);
       updateViz('temperature', [digit, graph]);
       updateViz('humidity', [digit, graph]);
-      updateViz('pressure', [graph]);
+      updateViz('pressure', [digit, graph]);
       updateViz('bsec', [digit, graph]);
       updateViz('co2', [digit, graph]);
       updateViz('gas', [digit, graph]);

@@ -384,7 +384,7 @@
   const pairButton = document.getElementById('pairButton');
   const BLEstatus = document.getElementById('bluetooth');
 
-  snack('IMPORTANT - first upload the sketch to your Arduino Nicla Sense ME &nbsp;&nbsp; <a href="https://create.arduino.cc/editor/FT-CONTENT/333e2e07-ecc4-414c-bf08-005b611ddd75/preview">OPEN</a>', 1)
+  //snack('IMPORTANT - first upload the sketch to your Arduino Nicla Sense ME &nbsp;&nbsp; <a href="https://create.arduino.cc/editor/FT-CONTENT/333e2e07-ecc4-414c-bf08-005b611ddd75/preview">OPEN</a>', 1)
   
   if ("bluetooth" in navigator) {
     pairButton.addEventListener('click', function (event) {
@@ -453,7 +453,7 @@
         NiclaSenseME[sensor].polling = setInterval(function () {
           NiclaSenseME[sensor].characteristic.readValue().then(function (data) { handleIncoming(NiclaSenseME[sensor], data); })
         }
-          , 500);
+          , 100);
       }
 
       NiclaSenseME[sensor].rendered = false;
